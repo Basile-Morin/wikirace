@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wikipedia Race � Jalon D</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 30px;
+      }
+      input, button {
+        margin: 5px;
+        padding: 6px 10px;
+        font-size: 15px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 2px 0;
+      }
+      li button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WikiRace Online</h1>
+    <div id="room-setup">
+      <input id="roomId" placeholder="Nom de la room">
+      <input id="username" placeholder="Ton pseudo">
+      <button id="joinBtn">Rejoindre</button>
+    </div>
+
+    <div id="game-setup" style="display:none;">
+      <input id="startInput" placeholder="Page de départ">
+      <input id="targetInput" placeholder="Page cible">
+      <button id="startBtn">Démarrer la partie</button>
+    </div>
+
+    <p id="info"></p>
+    <div id="viewer">
+      <iframe id="wikiFrame" style="width:100%; height:80vh; border:0;"></iframe>
+    </div>
+
+
+    <p>
+	  Entrez une page de depart et une page cible, puis cliquez sur "Demarrer".
+      Vous pouvez ensuite naviguer de lien en lien jusqu'a atteindre la page cible !
+    </p>
+
+    <!-- les champs seront contr�l�s par JS -->
+    <p id="info"></p>
+    <div id="viewer" style="border:1px solid #ddd; height:80vh; width:100%; margin-top:10px;">
+      <iframe id="wikiFrame" title="Wikirace" style="border:0; width:100%; height:100%;"></iframe>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src ="script.js"></script>
+  </body>
+</html>
