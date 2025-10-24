@@ -13,7 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/health', (req, res) => res.json({ ok: true }));
 
-// route : GET /links/:title
+// route : GET /links/:title*
+/*
 app.get('/links/:title', async (req, res) => {
   try {
     const { title } = req.params;
@@ -43,6 +44,7 @@ app.get('/links/:title', async (req, res) => {
     res.status(500).json({ error: 'Erreur serveur' });
   }
 });
+*/
 
 app.get('/wiki/:title', async (req, res) => {
   try {
